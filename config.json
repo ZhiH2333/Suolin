@@ -1,4 +1,6 @@
 {
     "lang": "en",
-    "APIdomain": "https://api.solian.app"
+    "APIdomain": "https://api.solian.app",
+    "autoFreshPage":false,
+    "logLevel":"DEBUG"
 }

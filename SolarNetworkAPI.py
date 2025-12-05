@@ -101,6 +101,26 @@ class SNAPI:
                                 headers={"User-Agent":self.UA,
                                         "Content-Type":"application/json"})
         return response
+    
+    def logout(self,token:str):
+        api_url = f"{self.DOMAIN}/pass/auth/logout"
+        response = self.requests_API(api_url,
+                                method="POST",
+                                headers={"User-Agent":self.UA,
+                                        "Authorization":f"Bearer {token}",
+                                        "Content-Type":"application/json"})
+        return response
+    
+    def get_home_activity(self,cursor: str = '', filter: str = '', take: int = 20, debuginclude: str = '', Authorization: str = '') -> dict:
+        """获取首页内容"""
+        url = f"{self.DOMAIN}/sphere/timeline"
+        headers = {'Content-Type': 'application/json', 'Authorization': Authorization}
+        params = {"cursor": cursor, "filter": filter, "take": take, "debuginclude": debuginclude}
+        return self.requests_API(url,
+                                method="GET",
+                                headers=headers,
+                                params=params)
+        return response
 ##chat
 
 ##realms
