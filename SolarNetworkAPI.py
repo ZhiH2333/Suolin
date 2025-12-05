@@ -111,12 +111,12 @@ class SNAPI:
                                         "Content-Type":"application/json"})
         return response
     
-    def get_home_activity(self,cursor: str = '', filter: str = '', take: int = 20, debuginclude: str = '', Authorization: str = '') -> dict:
+    def get_home_activity(self,cursor: str = '', filter: str = '', take: int = 20, debuginclude: str = '', Authorization: str = ''):
         """获取首页内容"""
         url = f"{self.DOMAIN}/sphere/timeline"
         headers = {'Content-Type': 'application/json', 'Authorization': Authorization}
         params = {"cursor": cursor, "filter": filter, "take": take, "debuginclude": debuginclude}
-        return self.requests_API(url,
+        response = self.requests_API(url,
                                 method="GET",
                                 headers=headers,
                                 params=params)
