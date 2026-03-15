@@ -1,9 +1,0 @@
-{
-    "language": "en",
-    "APIdomain": "https://api.solian.app",
-    "autoFreshPage":false,
-    "logLevel":"DEBUG",
-    "EncryptedUserToken":false,
-    "MaxHeight":30,
-    "MaxWidth":100
-}
