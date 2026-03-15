@@ -1,0 +1,120 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow: hidden;
+    background-color: #F0F5FF; /* 淡蓝色背景 */
+    color: #333;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* 侧边栏 */
+.sidebar {
+    background-color: #222;
+    color: white;
+    width: 200px;
+    height: 100vh;
+    overflow: auto;
+    border-right: 2px solid rgba(255, 0, 0, 0.5);
+    border-radius: 0 10px 10px 0; /* 左上角、右上角无圆角，其余有圆角 */
+    transition: width 0.3s ease;
+}
+
+.sidebar-header {
+    padding: 20px;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.sidebar-header p {
+    margin: 5px 0 0 0;
+    font-size: 12px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 柔和的分隔线 */
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #333;
+}
+
+.menu-item.active {
+    background-color: #444;
+}
+
+.icon-home {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.817 5.105A1 1 0 018.839 4H9.5c.373 0 .679.237.679.537v2H12.5a1 1 0 110 2h-1.062l-.893 4.465a1 1 0 01-1.786 0L8.562 8H7.5a1 1 0 110-2H7.817z" clip-rule="evenodd"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.icon-search {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 3.5A5.5 5.5 0 0114.5 9c0 1.544-.39 3.044-.985 4.44L14 11.985V14.5a.5.5 0 01-1 .5h-1a.5.5 0 01-.5-.5V11.985L9.985 14.44A5.5 5.5 0 019 3.5zm2.589 7.674L5.35 7.92a.5.5 0 01-.15.632L8 9.437l5.64-1.561a.5.5 0 01.15.632l-.474 1.979 4.275 4.275-.724.724-1.979.474zm2.16.173-.893.893a5.483 5.483 0 002.088 2.088l.894-.893a7.5 7.5 0 00-11.306-11.306L5.673 6.003a.5.5 0 01.707 0l.427.427 5.48 5.483z" clip-rule="evenodd"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+/* 主体区域 */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+}
+
+/* 顶部区域 */
+.top-bar {
+    background-color: #BFBFFF;
+    padding: 15px 25px;
+    border-bottom: 2px solid rgba(255, 0, 0, 0.5);
+    border-radius: 10px 10px 0 0; /* 左下角、右下角无圆角，其余有圆角 */
+}
+
+.top-bar h3 {
+    margin: 0;
+    color: #333;
+}
+
+/* 主页内容区 */
+.content-area {
+    flex: 1;
+    background-color: #E0E5F5; /* 淡灰色背景 */
+    padding: 25px;
+    border-radius: 5px; /* 圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 轻微的阴影 */
+}
+
+/* 状态栏 */
+.status-bar {
+    background-color: #333;
+    color: white;
+    padding: 15px 25px;
+    border-top: 2px solid rgba(255, 0, 0, 0.5);
+    border-radius: 0 0 10px 10px; /* 左上角、右上角无圆角，其余有圆角 */
+}
